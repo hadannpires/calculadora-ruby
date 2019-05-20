@@ -1,1 +1,1 @@
-web.ruby calculadora-ruby/calculadora.rb
+web: ruby calculadora-ruby/calculadora.rb

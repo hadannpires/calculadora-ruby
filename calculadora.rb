@@ -1,37 +1,41 @@
-puts "+++++++++++++++++++"
-puts "    Calculadora    "
-puts "+++++++++++++++++++"
+require 'sinatra'
 
-puts "INFORME A OPERACAO DE DESEJA FAZER"
-puts "ADCAO          >>>  +  "
-puts "SUBTRACAO      >>>  -  "
-puts "MULTIPLICACAO  >>>  *  "
-puts "DIVISAO        >>>  /  "
+get '/' do 
+    puts "+++++++++++++++++++"
+    puts "    Calculadora    "
+    puts "+++++++++++++++++++"
 
-puts "==================================="
+    puts "INFORME A OPERACAO DE DESEJA FAZER"
+    puts "ADCAO          >>>  +  "
+    puts "SUBTRACAO      >>>  -  "
+    puts "MULTIPLICACAO  >>>  *  "
+    puts "DIVISAO        >>>  /  "
 
-op = gets.delete("\n")
+    puts "==================================="
 
-puts "==================================="
+    op = gets.delete("\n")
 
-puts "INFORME A PRIMEIRA VARIAVEL"
-a = gets.to_f
-puts "INFORME A SEGUNDA VARIAVEL"
-b = gets.to_f
+    puts "==================================="
 
-case op 
-    when "+" 
-        c = a + b
-        puts c
-    when "-"
-        c = a - b
-        puts c
-    when "*"
-        c = a * b
-        puts c
-    when "/"
-        c = a / b
-        puts c
-    else 
-        puts "***Nao escolheu uma operacao suportada***"
+    puts "INFORME A PRIMEIRA VARIAVEL"
+    a = gets.to_f
+    puts "INFORME A SEGUNDA VARIAVEL"
+    b = gets.to_f
+
+    case op 
+        when "+" 
+            c = a + b
+            puts c
+        when "-"
+            c = a - b
+            puts c
+        when "*"
+            c = a * b
+            puts c
+        when "/"
+            c = a / b
+            puts c
+        else 
+            puts "***Nao escolheu uma operacao suportada***"
+    end
 end

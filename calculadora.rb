@@ -10,24 +10,28 @@ puts "DIVISAO        >>>  /  "
 
 puts "==================================="
 
-op = gets.to_s
+op = gets.delete("\n")
 
 puts "==================================="
 
 puts "INFORME A PRIMEIRA VARIAVEL"
-a = gets
+a = gets.to_f
 puts "INFORME A SEGUNDA VARIAVEL"
-b = gets
+b = gets.to_f
 
 case op 
     when "+" 
-        puts a + b
+        c = a + b
+        puts c
     when "-"
-        puts a - b
+        c = a - b
+        puts c
     when "*"
-        puts a * b
+        c = a * b
+        puts c
     when "/"
-        puts a / b
+        c = a / b
+        puts c
     else 
         puts "***Nao escolheu uma operacao suportada***"
 end
